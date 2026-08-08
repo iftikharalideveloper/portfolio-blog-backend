@@ -172,11 +172,38 @@ User (1) ──────< (Many) Project     [Sirf admin ke projects, but str
 9. Tested — ✅ (user got 403, admin got 201, public GET worked with populate)
 10. README.md created, code pushed to GitHub — ✅
 
-### Phase 3: Comments — 🔄 NEXT
-11. `Comment` model banao (content, post reference, author reference)
-12. Comment controller banao (create, getByPost, delete)
-13. Comment routes banao — **koi bhi logged-in user comment kar sake (`protect` chahiye, `isAdmin` NAHI)**
-14. Test karo (logged-in user comment kare — chalna chahiye; bina login ke comment try kare — 401 aana chahiye)
+### Phase 3: Comments — ✅ DONE
+11. `Comment` model — ✅ (content, post reference, author reference)
+12. Comment controller — ✅ (create, getByPost, delete with ownership check)
+13. Comment routes — ✅ (protect only, no isAdmin — any logged-in user can comment)
+14. Tested — ✅ (create, getAll, delete all working — including ownership check)
+
+### Phase 4: Projects (Portfolio Showcase) — ✅ DONE
+15. `Project` model — ✅ (title, description, techStack array, links, image, featured)
+16. Project controller — ✅ (5 functions, same pattern as Post)
+17. Project routes — ✅ (GET public, POST/PUT/DELETE protected)
+18. Tested — ✅ (create + getAll both working)
+
+### Phase 5: Contact Messages — ✅ DONE
+19. `Message` model — ✅ (name, email, message, read status with default false)
+20. Message controller — ✅ (sendMessage, getAllMessages with sort, markAsRead, deleteMessage)
+21. Message routes — ✅ (POST public, rest admin only)
+22. Tested — ✅ (send worked, read-marking worked)
+
+## 🎉 BACKEND CORE COMPLETE (Phases 0-5)
+Poora backend ban chuka hai: Auth (register/login/JWT), role-based access (admin/user),
+Posts CRUD, Comments (with ownership check), Projects CRUD, Contact Messages.
+
+### Phase 6: React Frontend — ⬜ NEXT
+23. React project setup karo (Vite se)
+24. Pages banao: Home/About, Projects, Blog List, Single Post (with comments), Login, Register, Admin Dashboard
+25. Backend se connect karo (fetch/axios), token ko localStorage mein save karo
+26. Styling (Tailwind ya CSS)
+
+### Phase 7: Deployment — ⬜ PENDING
+27. Backend deploy karo (Render)
+28. Frontend deploy karo (Vercel)
+29. Final live testing
 
 ### Phase 3: Comments
 6. `Comment` model banao

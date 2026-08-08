@@ -11,6 +11,8 @@ import postRoutes from "./routes/post.routes.js";
 import commentRoutes from "./routes/comment.routes.js";
 //project routes
 import projectRoutes from "./routes/project.routes.js";
+// api messages
+import messageRoutes from "./routes/message.routes.js";
 
 
 dotenv.config();
@@ -25,6 +27,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/projects", projectRoutes);
+app.use("/api/messages", messageRoutes);
 
 
 const port = process.env.PORT || 3000
