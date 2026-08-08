@@ -7,6 +7,8 @@ import { connDB } from "./database/database.js";
 import authRoutes from "./routes/auth.routes.js";
 // post routes
 import postRoutes from "./routes/post.routes.js";
+//comment routes
+import commentRoutes from "./routes/comment.routes.js";
 
 
 dotenv.config();
@@ -19,6 +21,7 @@ app.use(cors());
 connDB();
 app.use("/api/auth", authRoutes);
 app.use("/api/posts", postRoutes);
+app.use("/api/comments", commentRoutes);
 
 
 const port = process.env.PORT || 3000
